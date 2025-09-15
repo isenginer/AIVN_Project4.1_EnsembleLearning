@@ -32,7 +32,8 @@ Evaluating performance using metrics such as MAE, MSE, and MAPE. The final model
 |   |__ test_data.csv
 ├── main.py (might not be used)
 ├── notebooks
-│   ├── feature_engineering.ipynb
+│   ├── feature_extraction.ipynb
+|   ├── feature_exploration.ipynb
 │   └── xgboost.ipynb
 |   |__ randomforest.ipynb
 |   |__ gradientboost.ipynb
