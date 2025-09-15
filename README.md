@@ -17,7 +17,7 @@ Analyzing hourly load data alongside temperature and GHI from multiple sites. We
 Implementing `Text Embedding, Random Forest, Gradient Boost, XGBoost` that are fine-tuned over key hyperparameters.
 
 * **Model Evaluation & Forecast Generation**:
-Evaluating performance using metrics such as MAE, MSE, and MAPE. The final model produces reliable forecasts that mimic observed diurnal and seasonal trends.
+Evaluating performance using metrics such as MAE, MSE, and MAPE. The final model produces reliable forecasts.
 
 ## Repository Structure
 
