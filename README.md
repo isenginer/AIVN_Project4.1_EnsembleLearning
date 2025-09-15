@@ -26,10 +26,11 @@ Evaluating performance using metrics such as MAE, MSE, and MAPE. The final model
 ├── LICENSE (not applicable)
 ├── README.md
 ├── datasets
-│   ├── results.xlsx
-│   ├── testing.xlsx
-│   └── training.xlsx
-├── main.py
+│   ├── full_dataset (>2GB)
+│   ├── dataset2k.csv
+│   └── train_data.csv
+|   |__ test_data.csv
+├── main.py (might not be used)
 ├── notebooks
 │   ├── feature_engineering.ipynb
 │   └── xgboost.ipynb
@@ -45,8 +46,7 @@ Evaluating performance using metrics such as MAE, MSE, and MAPE. The final model
 1. Clone the Repository:
 
 ```
-git clone 
-cd 2025-PGE-Energy-Analytics
+git clone https://github.com/isenginer/AIVN_Project4.1_EnsembleLearning.git
 ```
 
 2. Install Dependencies (Optional):
@@ -77,7 +77,7 @@ Our approach can be summarized as follows:
 We standardize features and create new ones to capture temporal patterns (e.g., sine/cosine transformations of the hour) and aggregate multi-site weather data.
 
 * **Modeling**:
-The XGBoost algorithm is employed due to its ability to model non-linear relationships and its built-in regularization. Model hyperparameters (number of trees, tree depth, learning rate, etc.) are fine-tuned using a time-series aware cross-validation strategy.
+The model algorithm is employed due to its ability to model non-linear relationships and its built-in regularization. Model hyperparameters (number of trees, tree depth, learning rate, etc.) are fine-tuned using a time-series aware cross-validation strategy.
 
 * **Validation**:
 Model performance is evaluated using metrics such as MAE, MSE, and MAPE, ensuring the forecasts are both accurate and robust.
