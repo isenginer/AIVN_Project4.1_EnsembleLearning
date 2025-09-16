@@ -1,5 +1,5 @@
 """
-Class Embedding Vectorizer is the transfomer to convert the text to numpy array with library from SentenceTransfomer
+Class Embedding Vectorizer is the transformer to convert the text to numpy array with library from SentenceTransformer
 The method of `SentenceTransformer`:
 *
 *
