@@ -4,12 +4,9 @@ The method of `SentenceTransformer`:
 *
 *
 """
-from nltk.book import texts
 import numpy as np
-from streamlit import date_input
 from transformers.models.tapas.tokenization_tapas import parse_text
-from collections import Counter, defaultdict
-from typing import List, Dict, Literal, Union
+from typing import List, Dict, Literal, Union, Any
 
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sentence_transformers import SentenceTransformer
@@ -45,7 +42,7 @@ class EmbeddingVectorizer(object):
         return np.array(self.transform(texts, mode=mode))
 
 
-def tfidf_vectorizer(X_train, X_test) -> numpy.ndarray:
+def tfidf_vectorizer(X_train, X_test):
     """
     function to return the numpy array of train & test transformed from TfidfVectorizer
     :param X_train: train features
@@ -53,12 +50,12 @@ def tfidf_vectorizer(X_train, X_test) -> numpy.ndarray:
     :return: numpy array of train & test transformed from TfidfVectorizer
     """
     from sklearn.feature_extraction.text import TfidfVectorizer
-    tfidf = TfidfVectorizer(tokenizer=lambda text: parse_text(text))
+    tfidf = TfidfVectorizer()
     X_train_tfidf = tfidf.fit_transform(X_train)
     X_test_tfidf = tfidf.transform(X_test)
     return np.array(X_train_tfidf.toarray()), np.array(X_test_tfidf.toarray())
 
-def bow_vectorizer(X_train, X_test) -> numpy.ndarray:
+def bow_vectorizer(X_train, X_test):
     """
     function to return the numpy array of train & test transformed from CountVectorizer
     :param X_train: train features
@@ -66,12 +63,12 @@ def bow_vectorizer(X_train, X_test) -> numpy.ndarray:
     :return: numpy array of train & test transformed from CountVectorizer
     """
     from sklearn.feature_extraction.text import CountVectorizer
-    ctv = CountVectorizer(tokenizer=lambda text: parse_text(text))
+    ctv = CountVectorizer()
     X_train_bow = ctv.fit_transform(X_train)
     X_test_bow = ctv.transform(X_test)
     return np.array(X_train_bow.toarray()), np.array(X_test_bow.toarray())
 
-def embedding_vectorizer(X_train, X_test) -> numpy.ndarray:
+def embedding_vectorizer(X_train, X_test):
     """
     function to return the numpy array of train & test transformed from EmbeddingVectorizer
     :param X_train: train features
