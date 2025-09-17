@@ -174,7 +174,7 @@ def embedding_vectorizer(X_train, X_test):
     :param X_test: test features
     :return: numpy array of train & test transformed from EmbeddingVectorizer
     """
-    vectorizer = EmbeddingVectorizer()
+    vectorizer = EmbeddingVectorizer(device="cpu")
     X_train_vt = vectorizer.transform_numpy(X_train)
     X_test_vt = vectorizer.transform_numpy(X_test)
     return X_train_vt, X_test_vt
