@@ -46,7 +46,7 @@ class EmbeddingVectorizer(object):
     def transform(self,
                   texts: List[str],
                   mode: Literal["query", "passage", "raw"] = "query",
-                  batch_size: int=32,
+                  batch_size: int=64,
                   show_progress_bar: bool = False) -> List[List[float]]:
         """
         Transform texts to embeddings.
@@ -87,7 +87,7 @@ class EmbeddingVectorizer(object):
     def transform_numpy(self,
                         texts: List[str],
                         mode: Literal["query", "passage", "raw"] = "query",
-                        batch_size: int=32,
+                        batch_size: int=64,
                         show_progress_bar: bool = False) -> np.ndarray:
         """
         Transform texts to embeddings and return as numpy array.
@@ -179,7 +179,20 @@ def embedding_vectorizer(X_train, X_test):
     X_test_vt = vectorizer.transform_numpy(X_test)
     return X_train_vt, X_test_vt
 
+
+def category_numerical(category: str=""):
+    """
+    function to return the value of categorical string in list
+    :param category: the category string
+    :return: value of categorical string in lis/t
+    """
+    category_list = ["astro-ph", "cond-mat", "cs", "math", "physics"]
+    category_dict = dict(zip(category_list, range(1, 6)))
+    if category not in category_list:
+        return 0
+    else:
+        return category_dict[category]
+
 if __name__ == "__main__":
-    vectorizer = EmbeddingVectorizer()
-    embeddings = vectorizer.transform_numpy(["hello world"], mode="query")
-    print(embeddings)
+    category = "math"
+    print(category_numerical(category))
