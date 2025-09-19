@@ -178,21 +178,3 @@ def embedding_vectorizer(X_train, X_test):
     X_train_vt = vectorizer.transform_numpy(X_train)
     X_test_vt = vectorizer.transform_numpy(X_test)
     return X_train_vt, X_test_vt
-
-
-def category_numerical(category: str=""):
-    """
-    function to return the value of categorical string in list
-    :param category: the category string
-    :return: value of categorical string in lis/t
-    """
-    category_list = ["astro-ph", "cond-mat", "cs", "math", "physics"]
-    category_dict = dict(zip(category_list, range(1, 6)))
-    if category not in category_list:
-        return 0
-    else:
-        return category_dict[category]
-
-if __name__ == "__main__":
-    category = "math"
-    print(category_numerical(category))

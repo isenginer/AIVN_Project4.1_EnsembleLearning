@@ -22,6 +22,7 @@ def character_preprocessing(text):
     text = text.lower()
     return text
 
+
 def category_processing(text):
     """
     Function to preprocess categories: collect only first part
@@ -34,9 +35,21 @@ def category_processing(text):
     text_category = text_splitted.split(" ")[0]
     return text_category
 
+
+def category_numerical(category: str=""):
+    """
+    function to return the value of categorical string in list
+    :param category: the category string
+    :return: value of categorical string in lis/t
+    """
+    category_list = ["astro-ph", "cond-mat", "cs", "math", "physics"]
+    category_dict = dict(zip(category_list, range(1, 6)))
+    if category not in category_list:
+        return 0
+    else:
+        return category_dict[category]
+
+
 if __name__ == "__main__":
-    """
-    Test function of text preprocessing and character preprocessing
-    """
-    text = "phsic.gen sabidcb"
-    print(category_processing(text))
+    text = "cond-mat"
+    print(category_numerical(text))
