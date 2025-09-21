@@ -29,18 +29,17 @@ Evaluating performance using metrics such as MAE, MSE, and MAPE. The final model
 │   ├── full_dataset (>2GB)
 │   ├── dataset2k.csv
 │   └── train_data.csv
-|   |__ test_data.csv
+│   |__ test_data.csv
 ├── main.py (might not be used)
 ├── notebooks
-│   ├── feature_extraction.ipynb
-|   ├── feature_exploration.ipynb
-│   └── xgboost.ipynb
-|   |__ randomforest.ipynb
-|   |__ gradientboost.ipynb
+│   ├── 01_feature_extraction.ipynb
+│   ├── 02_model_processing.ipynb
+│   ├── i_test_module.ipynb
 ├── requirements.txt
 └── utils
     ├── visualization.py
-    |__ EmbeddingVectorization.py
+    ├── EmbeddingVectorization.py
+    ├── text_preprocesing.py
 ```
 
 ## Installation
