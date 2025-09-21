@@ -39,7 +39,7 @@ Evaluating performance using metrics such as MAE, MSE, and MAPE. The final model
 └── utils
     ├── visualization.py
     ├── EmbeddingVectorization.py
-    ├── text_preprocesing.py
+    └── text_preprocesing.py
 ```
 
 ## Installation
@@ -61,7 +61,7 @@ pip install -r requirements.txt
 Open the Jupyter notebooks in the notebooks directory to explore the data, visualize key insights, and review the model development process:
 
 ```
-jupyter ./notebooks/interactive_eda.ipynb
+
 ```
 
 ### Running the Scripts
