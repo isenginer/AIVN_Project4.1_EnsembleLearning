@@ -28,18 +28,23 @@ Evaluating performance using metrics such as MAE, MSE, and MAPE. The final model
 ├── datasets
 │   ├── full_dataset (>2GB)
 │   ├── dataset2k.csv
-│   └── train_data.csv
-│   |__ test_data.csv
+│   ├── train_data.csv
+│   └── test_data.csv
 ├── main.py (might not be used)
 ├── notebooks
 │   ├── 01_feature_extraction.ipynb
-│   ├── 02_model_processing.ipynb
-│   ├── i_test_module.ipynb
+│   ├── 02_ensemble_model_processing.ipynb
+│   ├── 03_classics_model_processing.ipynb
+    └── i_test_module.ipynb
 ├── requirements.txt
-└── utils
-    ├── visualization.py
-    ├── EmbeddingVectorization.py
-    └── text_preprocesing.py
+├── utils
+│   ├── visualization.py
+│   ├── EmbeddingVectorization.py
+│   └── text_preprocesing.py
+└── pkls
+    ├── all_vectorizers.pkl
+    ├── 
+    └── 
 ```
 
 ## Installation
