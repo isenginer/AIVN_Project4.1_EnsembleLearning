@@ -43,8 +43,7 @@ Evaluating performance using metrics such as MAE, MSE, and MAPE. The final model
 │   └── text_preprocesing.py
 └── pkls
     ├── all_vectorizers.pkl
-    ├── 
-    └── 
+    ├── other .. *.pkl
 ```
 
 ## Installation
